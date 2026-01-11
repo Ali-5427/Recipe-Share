@@ -17,13 +17,12 @@ export function AppHeader() {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="flex flex-col">
+        <SheetContent side="left" className="flex flex-col p-0">
           <SheetHeader className="h-[60px] flex flex-row items-center border-b px-6">
             <Link href="/" className="flex items-center gap-2 font-semibold">
               <UtensilsCrossed className="h-6 w-6 text-primary" />
-              <span className="font-headline text-xl text-primary">Culinary Canvas</span>
+              <SheetTitle className="font-headline text-xl text-primary">Culinary Canvas</SheetTitle>
             </Link>
-            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
           </SheetHeader>
           <div className="flex-1 overflow-auto py-2">
             <MainNav />
