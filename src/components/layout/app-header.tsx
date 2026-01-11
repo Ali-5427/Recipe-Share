@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { Button } from '@/components/ui/button';
 import { Menu, Search, UtensilsCrossed, User } from 'lucide-react';
 import { Input } from '@/components/ui/input';
@@ -17,17 +17,16 @@ export function AppHeader() {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left">
-          <div className="flex h-full max-h-screen flex-col gap-2">
-            <div className="flex h-[60px] items-center border-b px-6">
-              <Link href="/" className="flex items-center gap-2 font-semibold">
-                <UtensilsCrossed className="h-6 w-6 text-primary" />
-                <span className="font-headline text-xl text-primary">Culinary Canvas</span>
-              </Link>
-            </div>
-            <div className="flex-1 overflow-auto py-2">
-              <MainNav />
-            </div>
+        <SheetContent side="left" className="flex flex-col">
+          <SheetHeader className="h-[60px] flex flex-row items-center border-b px-6">
+            <Link href="/" className="flex items-center gap-2 font-semibold">
+              <UtensilsCrossed className="h-6 w-6 text-primary" />
+              <span className="font-headline text-xl text-primary">Culinary Canvas</span>
+            </Link>
+            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+          </SheetHeader>
+          <div className="flex-1 overflow-auto py-2">
+            <MainNav />
           </div>
         </SheetContent>
       </Sheet>
