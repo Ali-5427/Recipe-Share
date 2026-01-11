@@ -2,9 +2,8 @@
 
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Home, Book, PlusCircle, UtensilsCrossed } from 'lucide-react';
+import { Home, Book, PlusCircle, User } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
 
 export function MainNav() {
   const pathname = usePathname();
@@ -13,6 +12,7 @@ export function MainNav() {
     { href: '/', label: 'Feed', icon: Home },
     { href: '/cookbook', label: 'My Cookbook', icon: Book },
     { href: '/create', label: 'New Recipe', icon: PlusCircle },
+    { href: '/profile', label: 'Profile', icon: User },
   ];
 
   return (
